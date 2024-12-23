@@ -1,7 +1,7 @@
 FROM python:3.12.7-alpine As builder 
 LABEL author="sadik"
 COPY . /app
-RUN pip3 install -r requirements.txt
+RUN pip3 install --no-cache-dir -r requirements.txt
 
 
 FROM python:3.12.7-alpine AS runner 
